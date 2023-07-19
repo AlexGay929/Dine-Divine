@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- logo -->
+            <a href="#home" class="logo">Dine & Divine</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <!-- dishes -->
+            <ul class="navbar">
+                <a href="#boodleFight"><li>Boodle</li></a>
+                <a href="#mainDish"><li>Main Dish</li></a>
+                <a href="#dessertStrike"><li>Dessert</li></a>
+                <a href="#home"><li id="openModalBtn">Make a Reservation</li></a>
+                <a href="#home"><li id="openNoteModalBtn">Note!</li></a>
+            </ul>
+            <!-- cart icon -->
+            <i class='bx bxs-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <!-- cart -->
+            <div class="cart">
+                    <h2 class="cart-title">Your cart</h2>
+                    <!-- Content -->
+                    <div class="cart-content">
+                    <!-- content goes here -->
+                    </div>
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">Php 0</div>
+                    </div>
+                    <!-- Buy button -->
+                    <button type="button" class="btn-buy">Pay Now</button>
+                    <!-- Close Cart -->
+                    <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!-- End -->
+
+    <!-- table modal -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reservation Form</h2>
+            <form id="reservationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="0" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+
+            <div class="table-selection">
+                <h2 class="heading">Reservation Area</h2>
+                <i class='bx bx-notepad notes'></i>
+                <div class="table-grid">
+                    <div class="table" data-table="1">Table 1</div>
+                    <div class="table" data-table="2">Table 2</div>
+                    <div class="table" data-table="3">Table 3</div>
+                    <div class="table" data-table="4">Table 4</div>
+                    <div class="table" data-table="5">Table 5</div>
+                    <div class="table" data-table="6">Table 6</div>
+                    <div class="table" data-table="7">Table 7</div>
+                    <div class="table" data-table="8">Table 8</div>
+                    <div class="table" data-table="9">Table 9</div>
+                    <div class="table" data-table="10">Table 10</div>
+                    <div class="table" data-table="11">Table 11</div>
+                    <div class="table" data-table="12">Table 12</div>
+                    <!-- Add more tables as needed -->
+                </div>
+
+                <div class="date-selection">
+                    <!-- <h2>Select a Date</h2> -->
+                    <input type="date" id="date-picker">
+                    <p id="selected-date">Selected Date: None</p>
+                </div>
+
+                <p id="selected-table">Selected Table: None</p>
+            </div>   
+
+            <button type="submit">Submit</button>
+            
+
+            </form>
+        </div>
+    </div>
+    <!-- end -->
+
+    <!-- Note Modal -->
+    <div id="noteModal" class="modalNote">
+        <div class="modalNote-content">
+        <span class="closeNote">&times;</span>
+        <h2>Kindly follow these steps:</h2>
+        <textarea id="noteText" placeholder="Write your note here">
+            Step 1: Order and pay your food first. You can pay with any mastercard.
+            Step 2: Fill up everything in the "Reservation Form" then submit.
+            We value your time that's why ordering and posting a reservation is relatively fast. Til' our next transaction. Thank You!
+        </textarea>
+        </div>
+    </div>
+    <!-- END -->
+
+    <!-- Header Banner/ Hero -->
+    <section class="hero" id="home">
+        <!-- image -->
+        <img src="images/header-banner.jpg" alt="">
+        <!-- description -->
+        <div class="description">
+            <h2 class="slogan">"A Fusion of Flavors, A Feast for the Senses"</h2>
+            <br>
+            <span>Welcome to Dine & Divine, where culinary magic happens. Delight your senses with our exquisite menu,<br> crafted with passion and served with flair. Join us for an unforgettable dining experience that will leave you <br> craving for more. Bon appétit!</span>
+        </div>
+       
+    </section>
+
+   
+    <!-- END -->
+
+    <!-- Boodle -->
+    <section class="boodle section-padding" id="boodleFight">
+        <!-- heading -->
+        <div class="heading">
+            <h2>"Unite, Share, and Feast! Join the Boodle Fight Feast!"</h2>
+        </div>
+        <!-- hr -->
+        <hr class="hr-restaurant">
+        <!-- cards -->
+        <div class="card-container">
+            <div class="card">
+                <img src="https://i.imgur.com/sP1Tvna.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">Boodle Fight 1</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP1800</span>
+                  <a href="#boodleFight" class="card-button">Order Now</a>
+                </div>
+            </div>
+      
+
+            <div class="card">
+                <img src="https://i.imgur.com/cRPyeig.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">
+                  <h3 class="card-title">Boodle Fight 2</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP2100</span>
+                  <a href="#boodleFight" class="card-button">Order Now</a>
+                </div>
+            </div>
+        
+
+            <div class="card">
+                <img src="https://i.imgur.com/ykEytFt.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">
+                  <h3 class="card-title">Boodle Fight 3</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP2400</span>
+                  <a href="#boodleFight" class="card-button">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END -->
+
+    <!-- Main Dishes -->
+    <section class="main section-padding" id="mainDish">
+        <!-- heading -->
+        <div class="heading">
+            <h2>Main Dishes</h2>
+        </div>
+        <!-- main dishes -->
+        <div class="dish-container">
+            <!-- card 1 -->
+            <div class="card">
+                <img src="https://i.imgur.com/tRyurvw.png" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">SINIGANG</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP399</span>
+                  <a href="#mainDish" class="card-button">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://i.imgur.com/bgooaeQ.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">CRISPY PATA</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP399</span>
+                  <a href="#mainDish" class="card-button">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://i.imgur.com/PcMuTfM.png" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">TINOLANG TANGUIGE</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP399</span>
+                  <a href="#mainDish" class="card-button">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="https://i.imgur.com/EhOjBe9.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">SWEET & SOUR PORK</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP399</span>
+                  <a href="#mainDish" class="card-button">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="https://i.imgur.com/AZm0tqz.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">BUFFALO WINGS</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP399</span>
+                  <a href="#mainDish" class="card-button">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="https://i.imgur.com/JequaLL.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">GRILLED PORK</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP399</span>
+                  <a href="#mainDish" class="card-button">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="https://i.imgur.com/oKC37VS.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">SWEET & SOUR FISH</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP399</span>
+                  <a href="#mainDish" class="card-button">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="https://i.imgur.com/gBZAQHa.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">SPECIAL FRIED CHICKEN</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP399</span>
+                  <a href="#mainDish" class="card-button">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="card">
+                <img src="https://i.imgur.com/6l7NtcC.jpg" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">PORK STEAK</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP399</span>
+                  <a href="#mainDish" class="card-button">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END -->
+
+    <!-- Dessert -->
+    <section class="dessert" id="dessertStrike">
+        <!-- heading -->
+        <div class="heading">
+            <h2>Dessert for the day</h2>
+        </div>
+        <!-- dessert -->
+        <div class="package-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://i.imgur.com/VofPYrG.png" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">Kutsinta</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP199</span>
+                  <a href="#dessertStrike" class="card-button">Order Now</a>
+                </div>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://i.imgur.com/I4C6xFo.png" alt="Card Image" class="card-image">
+                <div class="card-content">   
+                  <h3 class="card-title">Leche Flan</h3>
+                  <p class="card-description">Description of the dish goes here.</p>
+                  <span class="price">PHP199</span>
+                  <a href="#dessertStrike" class="card-button">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END -->
+
+
+    <!-- Footer -->
+    <section class="contact" id="contact">
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+        </div>
+        <div class="links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Our Company</a>
+        </div>
+        <p>&#169; Alex Gay | All Rights Reserved</p>
+    </section>
+    <!-- END -->
+
+     <!-- scroll reveal -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+
+     <!-- cart js -->
+     <script src="script/cart.js"></script>
+
+     <!-- custom js -->
+    <script src="script/script.js"></script>
+</body>
+</html>
