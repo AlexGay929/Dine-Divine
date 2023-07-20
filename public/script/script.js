@@ -293,6 +293,7 @@ window.onload = function() {
     const email = document.getElementById("email").value;
     const date = document.getElementById("selected-date").value;
     const time = document.getElementById("time").value;
+    const phone = document.getElementById("phone").value;
     const guests = document.getElementById("guests").value;
     const selectedTable = document.getElementById("selected-table").value;
 
@@ -300,6 +301,7 @@ window.onload = function() {
     const formData = {
       name: name,
       email: email,
+      phone: phone,
       date: date,
       time: time,
       guests: guests,
