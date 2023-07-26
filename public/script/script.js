@@ -302,10 +302,10 @@ window.onload = function() {
       name: name,
       email: email,
       phone: phone,
-      date: date,
+      selecteddate: date,
       time: time,
       guests: guests,
-      "selected-table": selectedTable
+      selectedTable : selectedTable
     };
 
     // Get existing form data from local storage (if any)
