@@ -291,21 +291,21 @@ window.onload = function() {
     // Get form values
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
-    const date = document.getElementById("selected-date").value;
+    const date = document.getElementById("selected-date").innerText;
     const time = document.getElementById("time").value;
     const phone = document.getElementById("phone").value;
     const guests = document.getElementById("guests").value;
-    const selectedTable = document.getElementById("selected-table").value;
+    const selectedTable = document.getElementById("selected-table").innerText;
 
     // Create an object to store the form data
     const formData = {
       name: name,
       email: email,
       phone: phone,
-      selecteddate: date,
+      date : date,
       time: time,
       guests: guests,
-      selectedTable : selectedTable
+      table : selectedTable
     };
 
     // Get existing form data from local storage (if any)
